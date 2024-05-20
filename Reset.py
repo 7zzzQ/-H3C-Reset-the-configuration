@@ -3,16 +3,16 @@ def main():
     crt = crt.GetScriptTab()
 
     #设置设备参数
-    session_name = "MySSHSession"
-    hostname = "your.hostname.com"
+    session_name = "Fill MySSHSession"
+    hostname = "Fill hostname.com"
     port = 22
-    username = "your_username"
-    password = "your_password"
+    username = "Fill username"
+    password = "Fill password"
 
     #和设备建立SSH连接
     crt.Session.Connect("/SSH2 /L {} /PASSWORD {} /P {} {}".format(username, password, port, hostname))
     
-    #等待
+    #等待命令提示符
     crt.Screen.WaitForString("$")
 
     #发送重置配置命令
@@ -24,7 +24,7 @@ def main():
     #再次进行确认
     crt.Screen.Send("yes\n")
 
-    #等待完成
+    #等待重启确认命令完成
     crt.Screen.WaitForString("$")
 
     #读取输出内容
