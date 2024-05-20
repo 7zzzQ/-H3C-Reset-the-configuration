@@ -1,5 +1,5 @@
 def main():
-    #获取脚本对象
+    #获取脚本对象CRT
     crt = crt.GetScriptTab()
 
     #设置设备参数
