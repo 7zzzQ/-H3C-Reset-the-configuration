@@ -1,1 +1,1 @@
-This is a quick py script for SecureCRT SSH connections to quickly reset H3C routers, switches, and other devices in the class
+H3C设备快速重置恢复出厂指令脚本，使用前务必检查无重要配置
